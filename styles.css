@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #E5E4E2;
+    font-size: 10px;
+}
+#image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the images in the grid */
+    }
+
+#image-grid img {
+    max-width: 200px; /* Set a maximum width */
+    max-height: 200px; /* Set a maximum height */
+    width: auto; /* Maintain original width */
+    height: auto; /* Maintain original height */
+    margin: 5px; /* Space between images */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.head {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}

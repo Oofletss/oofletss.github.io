@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image Links</title>
+<link href="static/styles.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="head">
+    <h1>Bookmark Grid Viewer</h1>
+</div>
+    <div>
+  <form class="head" action="/upload" method="post">
+        <input type="text" name="image_link" placeholder="Enter Image URL" required>
+        <button type="submit">Upload</button>
+        <button onclick="window.location.href='/delete';">Delete</button>
+    </form>
+
+</div>
+    <div id="image-grid">
+        {% for url in image_urls %}
+            <img src="{{ url }}" alt="Uploaded Image">
+        {% endfor %}
+    </div>
+</body>
+</html>
